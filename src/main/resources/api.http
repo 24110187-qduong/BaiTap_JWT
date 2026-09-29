@@ -1,0 +1,27 @@
+### 1. Đăng ký tài khoản
+POST http://localhost:8005/auth/signup
+Content-Type: application/json
+
+{
+  "email": "qduong@hcmute.edu.vn",
+  "password": "123456",
+  "fullName": "Bùi Quý Dương",
+  "images": "/images/avatar.jpg"
+}
+
+### 2. Đăng nhập
+POST http://localhost:8005/auth/login
+Content-Type: application/json
+
+{
+  "email": "qduong@hcmute.edu.vn",
+  "password": "123456"
+}
+
+### 3. Lấy thông tin user (cần token)
+GET http://localhost:8005/users/me
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJxZHVvbmdAaGNtdXRlLmVkdS52biIsImlhdCI6MTc5MDY1MDAyMiwiZXhwIjoxNzkwNjUzNjIyfQ.2bV3xDzsr2ftWAKMSYHJ6AIsMReZGXVvZ8gEH2ttfTU",
+
+### 4. Lấy danh sách users (cần token)
+GET http://localhost:8005/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJxZHVvbmdAaGNtdXRlLmVkdS52biIsImlhdCI6MTc5MDY1MDAyMiwiZXhwIjoxNzkwNjUzNjIyfQ.2bV3xDzsr2ftWAKMSYHJ6AIsMReZGXVvZ8gEH2ttfTU",
